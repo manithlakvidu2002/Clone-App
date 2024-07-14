@@ -7,6 +7,7 @@ export default function Index() {
   return(
     <View>
       <OtpVerification/>
+      
     </View>
   );
 }

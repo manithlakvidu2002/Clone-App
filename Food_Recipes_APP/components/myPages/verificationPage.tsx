@@ -9,6 +9,7 @@ export default function OtpVerification() {
 
     const handleConfirm = () => {
         Alert.alert('Verification', `Entered Code: ${code}`);
+        setCode(''); 
     };
 
     const handleBackPress = () => {
@@ -20,10 +21,10 @@ export default function OtpVerification() {
             setCode(text);
         }
         if (text.length === 6 && inputRef.current) {
-            inputRef.current.blur(); // Auto close the text field when max length reached
+            inputRef.current.blur(); 
         }
         if (text.length === 0 && inputRef.current) {
-            inputRef.current.blur(); // Auto close the text field when empty
+            inputRef.current.blur(); 
         }
     };
 
@@ -91,11 +92,7 @@ const styles = StyleSheet.create({
         fontSize: 15,
         marginBottom: 50,
     },
-    name: {
-        fontSize: 13,
-        fontWeight: 'bold',
-        marginBottom: 10,
-    },
+
     button: {
         marginTop: 120,
         width: '100%',
