@@ -15,9 +15,10 @@ export default function ProfilePic(){
 
 const { width } = Dimensions.get('window');
 const styles = StyleSheet.create({
-    
     stretch: {
       width: width,
-      height: 200,
-    },
+      height: 230,
+    }
+    
+
 });

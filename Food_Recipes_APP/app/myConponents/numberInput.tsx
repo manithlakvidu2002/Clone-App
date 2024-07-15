@@ -36,6 +36,7 @@ export default function NumberInput() {
 
 const styles = StyleSheet.create({
   input: {
+    paddingBottom:10,
     height: 40,
     margin: 12,
     borderWidth: 1,

@@ -1,16 +1,19 @@
 import React, { useRef, useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import {useRouter} from "expo-router";
 
 export default function OtpVerification() {
+
+    const router = useRouter()
     const [code, setCode] = useState('');
     const inputRef = useRef<TextInput>(null);
     const navigation = useNavigation();
 
-    const handleConfirm = () => {
-        Alert.alert('Verification', `Entered Code: ${code}`);
-        setCode(''); 
-    };
+    // const handleConfirm = () => {
+    //     Alert.alert('Verification', `Entered Code: ${code}`);
+    //     setCode(''); 
+    // };
 
     const handleBackPress = () => {
         navigation.goBack();
@@ -49,7 +52,7 @@ export default function OtpVerification() {
                     keyboardType="numeric"
                 />
             </SafeAreaView>
-            <TouchableOpacity style={styles.button} onPress={handleConfirm}>
+            <TouchableOpacity style={styles.button} onPress={() => {router.push("myPages/signUpPage")}}>
                 <Text style={styles.buttonText}>Confirm</Text>
             </TouchableOpacity>
         </View>

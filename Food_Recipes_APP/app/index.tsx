@@ -1,15 +1,15 @@
-import MobileNumber from "@/components/myPages/mobileNumber";
-import SignUpPage from "@/components/myPages/signUpPage";
-import OtpVerification from "@/components/myPages/verificationPage";
+import MobileNumber from "@/app/myPages/mobileNumber";
+import SignUpPage from "@/app/myPages/signUpPage";
+import OtpVerification from "@/app/myPages/verificationPage";
 import { Text, View } from "react-native";
 
 export default function Index() {
   return(
     <View>
-      <OtpVerification/>
-      
+      <MobileNumber/>
     </View>
   );
 }
 //<MobileNumber/>
 //<SignUpPage/>
+//<OtpVerification/>
