@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import {useRouter} from "expo-router";
 
 export default function SignUpPage() {
+    const router = useRouter()
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const navigation = useNavigation();
@@ -42,7 +44,7 @@ export default function SignUpPage() {
                 onChangeText={setEmail}
                 keyboardType="email-address"
             />
-            <TouchableOpacity style={styles.button} onPress={handleSignUp}>
+            <TouchableOpacity style={styles.button} onPress={() => {router.push("myPages/homePage")}}>
                 <Text style={styles.buttonText}>Sign up</Text>
             </TouchableOpacity>
         </View>

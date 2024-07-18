@@ -46,8 +46,9 @@ export default function MobileNumber() {
 
 const styles = StyleSheet.create({
   container: {
-    paddingLeft:4,
-    paddingRight:4
+    // paddingLeft:4,
+    // paddingRight:4
+    padding:2
   },
   container2:{
     padding:5
