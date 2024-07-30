@@ -7,6 +7,7 @@ export default function RootLayout() {
       <Stack.Screen name="myPages/verificationPage" options={{ headerShown: false }}/>
       <Stack.Screen name="myPages/signUpPage" options={{ headerShown: false }}/>
       <Stack.Screen name="myPages/homePage" options={{ headerShown: false }}/>
+      <Stack.Screen name="myPages/explorePage" options={{ headerShown: false }}/>
 
     </Stack>
   );

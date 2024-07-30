@@ -1,7 +1,10 @@
 import React from 'react';
-import { SafeAreaView, View, StyleSheet, Text, ScrollView, Image } from 'react-native';
+import { SafeAreaView, View, StyleSheet, Text, ScrollView, Image,TouchableOpacity } from 'react-native';
+import {useRouter} from "expo-router";
 
 export default function HomePage() {
+
+  const router = useRouter()
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
@@ -89,24 +92,25 @@ export default function HomePage() {
 
 
 
+    
+
       <View style={styles.footer}>
-        <View style={styles.footerItem}>
+        <TouchableOpacity style={styles.footerItem} onPress={() => { router.push("myPages/homePage") }}>
           <Image source={require('../../assets/images/Home.png')} style={styles.footerIcon} />
           <Text style={styles.footerText}>Home</Text>
-        </View>
-        <View style={styles.footerItem}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.footerItem} onPress={() => { router.push("myPages/explorePage") }}>
           <Image source={require('../../assets/images/add.png')} style={styles.footerIcon} />
           <Text style={styles.footerText}>Category</Text>
-        </View>
-        <View style={styles.footerItem}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.footerItem} onPress={() => { router.push("myPages/addRecipePage") }}>
           <Image source={require('../../assets/images/add.png')} style={styles.footerIcon} />
           <Text style={styles.footerText}>Add Recipe</Text>
-        </View>
-        <View style={styles.footerItem}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.footerItem} onPress={() => { router.push("myPages/morePage") }}>
           <Image source={require('../../assets/images/more.png')} style={styles.footerIcon} />
           <Text style={styles.footerText}>More</Text>
-        </View>
-        
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
@@ -189,3 +193,4 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 });
+
