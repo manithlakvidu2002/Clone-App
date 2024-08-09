@@ -150,7 +150,7 @@ export default function ExplorePage() {
         
       {/* </ScrollView> */}
 
-      <View style={styles.footer}>
+      {/* <View style={styles.footer}>
         <TouchableOpacity style={styles.footerItem} onPress={() => { router.push("myPages/homePage") }}>
           <Image source={require('../../assets/images/Home.png')} style={styles.footerIcon} />
           <Text style={styles.footerText}>Home</Text>
@@ -167,13 +167,14 @@ export default function ExplorePage() {
           <Image source={require('../../assets/images/more.png')} style={styles.footerIcon} />
           <Text style={styles.footerText}>More</Text>
         </TouchableOpacity>
-      </View>
+      </View> */}
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   header: {
+    //marginTop:30,
     flexDirection: 'row',
     justifyContent: 'space-around',
     padding: 10,

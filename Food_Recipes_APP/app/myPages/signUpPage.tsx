@@ -44,7 +44,7 @@ export default function SignUpPage() {
                 onChangeText={setEmail}
                 keyboardType="email-address"
             />
-            <TouchableOpacity style={styles.button} onPress={() => {router.push("myPages/homePage")}}>
+            <TouchableOpacity style={styles.button} onPress={() => {router.push("../tabs")} }>
                 <Text style={styles.buttonText}>Sign up</Text>
             </TouchableOpacity>
         </View>
